@@ -1,47 +1,71 @@
-# Engine Leverage Protocol
+# Tool Data Leverage Protocol
 
 ## Purpose
 
-We do not need to see Gemini's hidden reasoning. We need to force the model to leave useful observable residue while it works.
+We are not collecting thinking traces, hidden reasoning, private chain-of-thought, or model mind-reading artifacts.
+
+We are collecting **tool data** and **observable work products**.
 
 The leverage engine is:
 
 ```text
-U-KSL directive -> bounded scout prompt -> checkpoint artifacts -> Codex handoff -> synthesis -> PR roadmap
+U-KSL directive -> bounded model task -> tool/event outputs -> file-path findings -> Codex handoff -> PR roadmap
 ```
 
 ## Rule
 
-Do not ask a model to "think deeply" and return a blob.
+Do not ask a model to expose reasoning.
+Do not ask for hidden trace.
+Do not preserve private reasoning as a project artifact.
 
-Ask it to return phase checkpoints, uncertainty, and downstream handoff material.
+Ask for observable outputs:
 
-## Observable checkpoints
+- tool calls
+- tool results
+- files inspected
+- dependency findings
+- command outputs
+- errors
+- checkpoints
+- artifacts created
+- ranked upgrade candidates
+- PR-sized recommendations
+- uncertainty list
+- questions for the next walker
+
+## Observable tool-data cards
 
 Gemini should return the following cards:
 
-1. **Scout Snapshot**
-   - current read of the project
+1. **Scout Output Card**
+   - current project read
    - strongest short-term upgrade hypotheses
    - biggest unknowns
 
-2. **Risk Card**
+2. **Tool/Data Target Card**
+   - which repo areas need tool-backed inspection
+   - which files Codex should inspect
+   - which commands/tests may produce useful evidence
+   - which artifacts should exist after inspection
+
+3. **Risk Card**
    - user-safety risks
+   - data-handling risks
    - trust-boundary risks
    - product-positioning risks
 
-3. **Leverage Card**
+4. **Leverage Card**
    - what can become OSS core
    - what can become paid Skill packs
    - what can become pro CLI
    - what should be deferred
 
-4. **Codex Handoff Card**
+5. **Codex Handoff Card**
    - top questions Codex must verify in files
    - repo paths likely worth inspection
-   - hypotheses Codex should confirm/refute
+   - hypotheses Codex should confirm/refute with evidence
 
-5. **Exit Card**
+6. **Exit Card**
    - ranked short-term upgrade candidates
    - recommended first PR direction
    - what not to decide yet
@@ -56,15 +80,17 @@ Gemini should:
 - identify risks
 - sharpen Codex questions
 - preserve optionality
+- identify repo/tool-data targets
 - avoid dashboard/SaaS/default-UI gravity
-- avoid hidden-reasoning or enterprise-security claims
+- avoid enterprise-security claims
 
 Gemini should not:
 
 - rewrite the roadmap
 - decide mid-term or long-term strategy
-- make repo claims without evidence
+- claim file facts without evidence
 - produce unbounded strategy fog
+- provide or preserve hidden reasoning traces
 
 ## Handoff to Codex
 
@@ -77,20 +103,20 @@ Codex receives:
 Codex then performs the repo-grounded pass:
 
 ```text
-confirm -> refute -> sharpen -> cite file paths -> return PR-sized moves
+inspect files -> run/check commands -> confirm/refute -> cite file paths -> return PR-sized moves
 ```
 
 ## Optional AFR capture
 
-If Gemini is called through a local script/API wrapper, record the interaction with AFR as a model call:
+If Gemini is called through a local script/API wrapper, record only the observable boundary with AFR:
 
-- prompt -> model input
-- response -> model output
-- phase -> state snapshot
-- scout result -> checkpoint
+- prompt -> model input artifact
+- response -> model output artifact
+- files/tools used -> tool data if available
+- final scout output -> checkpoint artifact
 - final handoff -> exportable artifact
 
-This turns model work into a traceable run.
+Do not record or request hidden reasoning.
 
 If Gemini is used through a web UI, capture manually:
 
@@ -105,7 +131,9 @@ The engine is useful only if every model pass produces one of these:
 - a ranked decision
 - a sharpened question
 - a verified file-path finding
+- a tool output
+- a command/test result
 - a PR-sized recommendation
 - a defer/avoid boundary
 
-Anything else is just model vapor wearing a badge.
+Anything else is model vapor wearing a badge.
