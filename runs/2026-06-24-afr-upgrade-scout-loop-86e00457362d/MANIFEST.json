@@ -1,0 +1,29 @@
+{
+  "schema": "u-ksl.vault.run_manifest.v1",
+  "run_name": "U-KSL: AFR Short-Term Upgrade Discovery Loop",
+  "primitive_name": "AFR Upgrade Scout Loop",
+  "date": "2026-06-24",
+  "folder": "runs/2026-06-24-afr-upgrade-scout-loop-86e00457362d",
+  "canonical_hash_sha256": "86e00457362d6aa30d0eea6192249b14eed82efe0fe53198becb91d68c0e146f",
+  "hash_basis": "Canonical JSON of run name, date, Ultra stage, Ultra goal, kernel, exit condition, dispatch order, and source receipts.",
+  "primary_repo": "cwwjacobs/agent-flight-recorder",
+  "vault_repo": "cwwjacobs/u-ksl-vault",
+  "ultra_stage": "Ultra Stage 1: Map / Kernel / Boundary / Dispatch",
+  "ultra_goal": "Find the strongest short-term upgrade direction for AFR as a public local-first proof engine / loss leader.",
+  "kernel": "AFR should make agent failures visible, exportable, and reusable as regression/eval artifacts while keeping user data local and preserving honest safety boundaries.",
+  "exit_condition": "We know what to upgrade first, why it matters, and what not to touch yet.",
+  "dispatch_order": [
+    "Gemini Pro / Flash scout pass",
+    "Codex 5.5 xhigh repo-grounded audit",
+    "Qwen/Gwen table/checklist compression",
+    "Maia/current instance Ultra-KSL synthesis"
+  ],
+  "expected_final_artifact": "AFR Short-Term Upgrade Shape",
+  "source_receipts": [
+    "cwwjacobs/agent-flight-recorder#18",
+    "cwwjacobs/agent-flight-recorder#15",
+    "cwwjacobs/agent-flight-recorder#16",
+    "cwwjacobs/agent-flight-recorder#17"
+  ],
+  "status": "Ultra Stage 1 captured; Stage 2 scout/audit pending"
+}
