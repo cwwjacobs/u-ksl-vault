@@ -7,7 +7,13 @@
 - Prompt file: `prompts/gemini-scout.md`
 - U-KSL run: `AFR Upgrade Scout Loop`
 
-## 1. Scout Snapshot
+## Non-goal
+
+This result should contain observable outputs, tool/data targets, repo paths, verification questions, and PR-sized recommendations.
+
+It should not contain private internal model process notes.
+
+## 1. Scout Output Card
 
 ### Executive read
 
@@ -28,9 +34,32 @@
 4.
 5.
 
-## 2. Risk Card
+## 2. Tool/Data Target Card
+
+### Repo areas needing tool-backed inspection
+
+- 
+
+### Files Codex should inspect
+
+- 
+
+### Commands/tests likely to produce useful evidence
+
+```bash
+
+```
+
+### Artifacts that should exist after inspection
+
+- 
+
+## 3. Risk Card
 
 ### User-safety risks
+
+
+### Data-handling risks
 
 
 ### Trust-boundary risks
@@ -39,7 +68,7 @@
 ### Product-positioning risks
 
 
-## 3. Leverage Card
+## 4. Leverage Card
 
 ### OSS core candidates
 
@@ -56,7 +85,7 @@
 ### Avoid for now
 
 
-## 4. Codex Handoff Card
+## 5. Codex Handoff Card
 
 ### Top questions Codex must verify
 
@@ -75,11 +104,11 @@
 
 - 
 
-### Hypotheses Codex should confirm/refute
+### Hypotheses Codex should confirm/refute with evidence
 
 - 
 
-## 5. Exit Card
+## 6. Exit Card
 
 ### Ranked short-term upgrade candidates
 
