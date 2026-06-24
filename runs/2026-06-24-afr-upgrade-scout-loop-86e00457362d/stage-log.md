@@ -84,3 +84,21 @@ Reason:
 - Add optional Qwen/Gwen compression.
 - Perform Ultra Stage 3 verification.
 - Produce final artifact: `AFR Short-Term Upgrade Shape`.
+
+## Qwen status update
+
+Qwen CLI/API access was restricted during Stage 2 setup.
+
+Decision:
+- Qwen is optional for this loop.
+- Qwen is not part of the critical path.
+- Compression/table extraction can be done by Kimi, Codex, Maia/current instance, or another available engine.
+
+Updated route:
+
+```text
+Gemini / Flash scout
+-> Codex 5.5 xhigh repo audit
+-> optional Kimi/compression pass
+-> Maia/current instance Ultra Stage 3 synthesis
+```
