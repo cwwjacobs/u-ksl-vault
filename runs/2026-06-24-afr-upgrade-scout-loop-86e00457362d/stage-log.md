@@ -102,3 +102,58 @@ Gemini / Flash scout
 -> optional Kimi/compression pass
 -> Maia/current instance Ultra Stage 3 synthesis
 ```
+
+## Qwen status update
+
+Qwen CLI/API access was restricted during Stage 2 setup.
+
+Decision:
+- Qwen is optional for this loop.
+- Qwen is not part of the critical path.
+- Compression/table extraction can be done by Kimi, Codex, Maia/current instance, or another available engine.
+
+Updated route:
+
+```text
+Gemini / Flash scout
+-> Codex 5.5 xhigh repo audit
+-> optional Kimi/compression pass
+-> Maia/current instance Ultra Stage 3 synthesis
+cat >> runs/2026-06-24-afr-upgrade-scout-loop-86e00457362d/stage-log.md <<'EOF'
+
+## Qwen status update
+
+Qwen CLI/API access was restricted during Stage 2 setup.
+
+Decision:
+- Qwen is optional for this loop.
+- Qwen is not part of the critical path.
+- Compression/table extraction can be done by Kimi, Codex, Maia/current instance, or another available engine.
+
+Updated route:
+
+```text
+Gemini / Flash scout
+-> Codex 5.5 xhigh repo audit
+-> optional Kimi/compression pass
+-> Maia/current instance Ultra Stage 3 synthesis
+
+```
+
+## Qwen status update
+
+Qwen CLI/API access was restricted during Stage 2 setup.
+
+Decision:
+- Qwen is optional for this loop.
+- Qwen is not part of the critical path.
+- Compression/table extraction can be done by Kimi, Codex, Maia/current instance, or another available engine.
+
+Updated route:
+
+```text
+Gemini / Flash scout
+-> Codex 5.5 xhigh repo audit
+-> optional Kimi/compression pass
+-> Maia/current instance Ultra Stage 3 synthesis
+
