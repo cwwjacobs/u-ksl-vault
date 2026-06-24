@@ -16,7 +16,9 @@ The operator created `u-ksl-vault` as the canonical archive for U-KSL runs.
 
 The toy-trip-planner run proved the loop:
 
+```text
 record -> inspect -> export -> regression case -> test
+```
 
 Observed proof:
 
@@ -47,27 +49,33 @@ Recent AFR PRs:
 
 ### Current U-KSL state
 
+```text
 Ultra Stage 1: Map / Kernel / Boundary / Dispatch
+```
 
 The exit condition for this run is:
 
+```text
 We know what to upgrade first, why it matters, and what not to touch yet.
+```
 
 ### Dispatch decision
 
 Corrected model route:
 
+```text
 1. Gemini / Flash scout pass
 2. Codex 5.5 xhigh repo-grounded audit
 3. Optional Kimi / compression pass
-4. Maia / current instance Ultra Stage 3 synthesis
+4. Stage 3 synthesis pass
+```
 
 Reason:
 
 - Gemini / Flash scouts the broad question.
 - Codex 5.5 xhigh performs the strongest repo-grounded audit after the scout sharpens the target.
 - Kimi or another available engine can compress into operator tables if needed.
-- Maia / current instance performs Stage 3 verification and synthesis.
+- The Stage 3 synthesis pass performs verification and final short-term upgrade shaping.
 
 ### Qwen status update
 
@@ -77,14 +85,16 @@ Decision:
 
 - Qwen is optional for this loop.
 - Qwen is not part of the critical path.
-- Compression/table extraction can be done by Kimi, Codex, Maia/current instance, or another available engine.
+- Compression/table extraction can be done by Kimi, Codex, the Stage 3 synthesis pass, or another available engine.
 
 Updated route:
 
+```text
 1. Gemini / Flash scout
 2. Codex 5.5 xhigh repo audit
 3. Optional Kimi / compression pass
-4. Maia / current instance Ultra Stage 3 synthesis
+4. Stage 3 synthesis pass
+```
 
 ## Open TODO
 
