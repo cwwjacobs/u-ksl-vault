@@ -16,9 +16,7 @@ The operator created `u-ksl-vault` as the canonical archive for U-KSL runs.
 
 The toy-trip-planner run proved the loop:
 
-```text
 record -> inspect -> export -> regression case -> test
-```
 
 Observed proof:
 
@@ -45,115 +43,53 @@ Recent AFR PRs:
 
 - `#15` merged: CLI-first repair spine and regression-case/eval seed flow
 - `#16` merged: backend/CLI-first cleanup, React/UI removed from default path
-- `#17` open/mergeable at time of capture: friendly CLI commands and `latest` selectors
+- `#17` merged: friendly CLI commands and `latest` selectors
 
 ### Current U-KSL state
 
-```text
 Ultra Stage 1: Map / Kernel / Boundary / Dispatch
-```
 
 The exit condition for this run is:
 
-```text
 We know what to upgrade first, why it matters, and what not to touch yet.
-```
 
 ### Dispatch decision
 
 Corrected model route:
 
-```text
-1. Gemini Pro / Flash scout pass
+1. Gemini / Flash scout pass
 2. Codex 5.5 xhigh repo-grounded audit
-3. Qwen/Gwen table/checklist compression
-4. Maia/current instance Ultra-KSL synthesis
-```
+3. Optional Kimi / compression pass
+4. Maia / current instance Ultra Stage 3 synthesis
 
 Reason:
 
-- Gemini Pro/Flash scouts the broad question.
+- Gemini / Flash scouts the broad question.
 - Codex 5.5 xhigh performs the strongest repo-grounded audit after the scout sharpens the target.
-- Qwen/Gwen compresses into operator tables.
-- Maia/current instance performs Stage 3 verification and synthesis.
+- Kimi or another available engine can compress into operator tables if needed.
+- Maia / current instance performs Stage 3 verification and synthesis.
+
+### Qwen status update
+
+Qwen CLI/API access was restricted during Stage 2 setup.
+
+Decision:
+
+- Qwen is optional for this loop.
+- Qwen is not part of the critical path.
+- Compression/table extraction can be done by Kimi, Codex, Maia/current instance, or another available engine.
+
+Updated route:
+
+1. Gemini / Flash scout
+2. Codex 5.5 xhigh repo audit
+3. Optional Kimi / compression pass
+4. Maia / current instance Ultra Stage 3 synthesis
 
 ## Open TODO
 
 - Add Gemini scout results when returned.
 - Add Codex xhigh audit results when returned.
-- Add optional Qwen/Gwen compression.
+- Add optional Kimi/compression output if useful.
 - Perform Ultra Stage 3 verification.
 - Produce final artifact: `AFR Short-Term Upgrade Shape`.
-
-## Qwen status update
-
-Qwen CLI/API access was restricted during Stage 2 setup.
-
-Decision:
-- Qwen is optional for this loop.
-- Qwen is not part of the critical path.
-- Compression/table extraction can be done by Kimi, Codex, Maia/current instance, or another available engine.
-
-Updated route:
-
-```text
-Gemini / Flash scout
--> Codex 5.5 xhigh repo audit
--> optional Kimi/compression pass
--> Maia/current instance Ultra Stage 3 synthesis
-```
-
-## Qwen status update
-
-Qwen CLI/API access was restricted during Stage 2 setup.
-
-Decision:
-- Qwen is optional for this loop.
-- Qwen is not part of the critical path.
-- Compression/table extraction can be done by Kimi, Codex, Maia/current instance, or another available engine.
-
-Updated route:
-
-```text
-Gemini / Flash scout
--> Codex 5.5 xhigh repo audit
--> optional Kimi/compression pass
--> Maia/current instance Ultra Stage 3 synthesis
-cat >> runs/2026-06-24-afr-upgrade-scout-loop-86e00457362d/stage-log.md <<'EOF'
-
-## Qwen status update
-
-Qwen CLI/API access was restricted during Stage 2 setup.
-
-Decision:
-- Qwen is optional for this loop.
-- Qwen is not part of the critical path.
-- Compression/table extraction can be done by Kimi, Codex, Maia/current instance, or another available engine.
-
-Updated route:
-
-```text
-Gemini / Flash scout
--> Codex 5.5 xhigh repo audit
--> optional Kimi/compression pass
--> Maia/current instance Ultra Stage 3 synthesis
-
-```
-
-## Qwen status update
-
-Qwen CLI/API access was restricted during Stage 2 setup.
-
-Decision:
-- Qwen is optional for this loop.
-- Qwen is not part of the critical path.
-- Compression/table extraction can be done by Kimi, Codex, Maia/current instance, or another available engine.
-
-Updated route:
-
-```text
-Gemini / Flash scout
--> Codex 5.5 xhigh repo audit
--> optional Kimi/compression pass
--> Maia/current instance Ultra Stage 3 synthesis
-
