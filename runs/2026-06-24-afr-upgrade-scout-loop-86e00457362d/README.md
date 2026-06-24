@@ -65,7 +65,7 @@ The AFR toy-trip-planner proof showed:
 1. Gemini Pro / Flash scout pass
 2. Codex 5.5 xhigh repo-grounded audit
 3. Qwen/Gwen table/checklist compression
-4. Maia/current instance Ultra-KSL synthesis
+4. Stage 3 synthesis pass
 ```
 
 ## Stage 3 verification target
